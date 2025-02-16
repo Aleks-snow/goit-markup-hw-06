@@ -402,15 +402,15 @@ button {
 /* section portfolio */
 
 .section-portfolio {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 
 .portfolio-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 48px 24px;
+  gap: 48px;
   justify-content: center;
 }
 
@@ -426,7 +426,7 @@ button {
   color: #2e2f42;
   font-weight: 700;
   font-size: 36px;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.02em;
   text-align: center;
   line-height: 1.11;
   text-transform: capitalize;
@@ -437,7 +437,7 @@ button {
   color: #2e2f42;
   font-weight: 500;
   font-size: 20px;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.02em;
   line-height: 1.2;
   margin-bottom: 8px;
 
@@ -447,7 +447,7 @@ button {
   color: #434455;
   font-size: 16px;
   line-height: 1.5;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.02em;
 
 }
 
@@ -491,22 +491,12 @@ button {
 
 .footer {
   background-color: #2e2f42;
-  padding-top: 100px;
-  padding-bottom: 100px;
-
-
+  padding-top: 96px;
+  padding-bottom: 96px;
+  text-align: center;
+  
 }
 
-.footer-container {
-  display: flex;
-  align-items: baseline;
-}
-
-
-.footer-logo {
-  width: 264px;
-  margin-right: 120px;
-}
 
 .footer-logo-blue {
   color: #4d5ae5;
@@ -518,8 +508,6 @@ button {
   text-transform: uppercase;
   display: inline-block;
   margin-bottom: 16px;
-
-
 }
 
 .footer-logo-white {
@@ -528,8 +516,9 @@ button {
   font-weight: 700;
   font-size: 18px;
   line-height: 1.17;
-  letter-spacing: -0.03em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
+  
 
 }
 
@@ -537,8 +526,13 @@ button {
   color: #f4f4fd;
   font-size: 16px;
   line-height: 1.5;
-  letter-spacing: -0.02em;
-  width: 264px;
+  letter-spacing: 0.02em;
+  width: 288px;
+  text-align: left;
+}
+
+.footer-icon-wrapper{
+  padding-top: 72px;
 }
 
 .footer-icon-text {
@@ -549,13 +543,14 @@ button {
   letter-spacing: 0.02em;
   color: #fff;
   margin-bottom: 16px;
+  text-align: center;
 }
 
 
 .footer-icon-list {
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
   gap: 16px;
 
 }
@@ -588,10 +583,11 @@ button {
 
 
 .footer-email-box {
-  margin-left: 80px;
+  justify-content: center;
+  padding-top: 72px;
 }
 
-
+  
 .footer-send {
   fill: #fff;
   margin-left: 16px;
@@ -599,6 +595,7 @@ button {
 
 .footer-form {
   display: flex;
+  flex-direction: column;
   gap: 24px;
 }
 
@@ -917,7 +914,7 @@ button {
 
 @media screen and (min-width: 768px) {
  .container {
-  max-width: 768px;
+  max-width: 1157px;
   padding-left: 16px;
   padding-right: 16px;
   }
@@ -937,8 +934,6 @@ flex-basis: calc((100% - 24px) / 2);
   text-align: left;
 }
 
-
-
 .team-list {
   gap: 64px;
 }
@@ -949,11 +944,40 @@ flex-basis: calc((100% - 24px) / 2);
   
 }
 
+.portfolio-list{
+  gap: 72px 24px;
+}
 
+.portfolio-item{
+  flex-basis: calc((100% - 24px) / 2);
+}
 
+.portfolio-wrapper{
+  width: 356px;
+}
 
+.footer-container{
+  text-align: start;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 108px;
+}
+.footer-text{
+  padding-right: 24px;
+}
 
+.footer-icon-wrapper{
+  padding: 0;
+}
 
+.footer-icon-text{
+  text-align: start;
+}
+.footer-form{
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
 
 
 }
@@ -964,8 +988,9 @@ flex-basis: calc((100% - 24px) / 2);
 
 @media screen and (min-width: 1158px) {
   .container {
-    max-width: 1158px;
-   
+    min-width: 1158px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .section-one {
@@ -1018,7 +1043,7 @@ flex-basis: calc((100% - 24px) / 2);
       
     }
  
-        /* team*/
+      
     
     
         .team {
@@ -1113,6 +1138,26 @@ flex-basis: calc((100% - 24px) / 2);
           fill: #F4F4FD;
         }
 
+   
+
+   .section-portfolio{
+  padding-top: 120px;
+  padding-bottom: 120px;
+  
+}
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: row;
+  gap: 48px 24px;
+  justify-content: start;
+
+ 
+}
+
+.portfolio-item {
+ flex-basis: calc((100% - 48px) / 3);
+}
 
 
 
