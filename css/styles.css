@@ -186,16 +186,12 @@ button {
   display: none;
 }
 
-.section-one-item {
-   gap: 72px;
-}
-
 .section-one-list {
   display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
+  flex-direction: column;
+  gap: 72px;
   justify-content: center;
-   width: 100%;
+  width: 100%;
 }
 
 .section-one-title {
@@ -420,6 +416,7 @@ button {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-bottom: 16px;
 }
 
 .footer-text {
@@ -432,7 +429,7 @@ button {
 }
 
 .footer-icon-wrapper{
-  padding-top: 72px;
+  margin-top: 72px;
 }
 
 .footer-icon-text {
@@ -482,7 +479,7 @@ button {
 
 .footer-email-box {
   justify-content: center;
-  padding-top: 72px;
+  margin-top: 72px;
 }
 
   
@@ -494,7 +491,7 @@ button {
 .footer-form {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
 }
 
 .footer-email-subscribe {
@@ -1043,13 +1040,13 @@ button {
 @media (min-device-pixel-ratio: 2),
 (min-resolution: 192dpi),
 (min-resolution: 2dppx) {
-  .hero__bg-image {
+  .hero-image {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)),
       url('../images/hero/hero-image-tab-2x-min.jpg');
   }
-
 }
+
 .hero-title{
   font-weight: 700;
   font-size: 56px;
@@ -1063,7 +1060,12 @@ button {
 }
 
 .section-one-list {
-  gap: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  row-gap: 72px;
+  column-gap: 24px;
+  
 }
 
 .section-one-item{
@@ -1075,7 +1077,7 @@ flex-basis: calc((100% - 24px) / 2);
 }
 
 .team-list {
-  gap: 64px;
+  gap: 72px 24px;
 }
 
 .team-player{
@@ -1092,10 +1094,6 @@ flex-basis: calc((100% - 24px) / 2);
   flex-basis: calc((100% - 24px) / 2);
 }
 
-.portfolio-wrapper{
-  width: 356px;
-}
-
 .footer-container{
   text-align: start;
   display: flex;
@@ -1103,11 +1101,13 @@ flex-basis: calc((100% - 24px) / 2);
   padding-left: 108px;
 }
 .footer-text{
-  padding-right: 24px;
+  margin-right: 24px;
+  width: 264px;
 }
 
 .footer-icon-wrapper{
   padding: 0;
+  margin-top: 0;
 }
 
 .footer-icon-text{
@@ -1121,8 +1121,8 @@ flex-basis: calc((100% - 24px) / 2);
 
 .modal {
   padding: 72px 24px 24px 24px;
-  max-width: 408px;
-  min-height: 584px;
+  width: 408px;
+  height: 584px;
 }
 }
 
@@ -1130,9 +1130,9 @@ flex-basis: calc((100% - 24px) / 2);
 
 @media screen and (min-width: 1158px) {
   .container {
-    min-width: 1158px;
-    padding: 0 16px;
-    width: 100%;
+   min-width: 1158px;
+   padding-left: 16px;
+   padding-left: 16px;
   }
 
 .logo-blue {
@@ -1148,10 +1148,26 @@ flex-basis: calc((100% - 24px) / 2);
   text-transform: uppercase;
 }
 
+.header-contacts-item a {
+  padding: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+.contacts-list{
+  padding-top: 24px;
+  padding-bottom: 24px;
+  display: flex;
+  gap: 40px;
+
+}
+
 .hero-image {
   padding-top: 188px;
   padding-bottom: 188px;
-  width: 1158px;
+  width: 100%;
   background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/hero-image-pc-1x-min.jpg);
 
 }
@@ -1159,7 +1175,7 @@ flex-basis: calc((100% - 24px) / 2);
  @media (min-device-pixel-ratio: 2),
  (min-resolution: 192dpi),
  (min-resolution: 2dppx) {
-   .hero__bg-image {
+   .hero-image {
      background-image: linear-gradient(rgba(46, 47, 66, 0.7),
          rgba(46, 47, 66, 0.7)),
        url('../images/hero/hero-image-pc-2x-min.jpg');
@@ -1213,7 +1229,7 @@ flex-basis: calc((100% - 24px) / 2);
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
-    letter-spacing: -0.02em;
+    letter-spacing: 0.02em;
     margin-bottom: 8px;
     text-align: left;
            
@@ -1224,7 +1240,7 @@ flex-basis: calc((100% - 24px) / 2);
       font-size: 16px;
       line-height: 1.5;
       letter-spacing: -0.02em;
-      
+      font-weight: 400;
     }
  
 .team {
@@ -1257,7 +1273,7 @@ flex-basis: calc((100% - 24px) / 2);
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.02em;
   text-align: center;
   margin-bottom: 8px;
   }
@@ -1267,7 +1283,7 @@ flex-basis: calc((100% - 24px) / 2);
   font-size: 16px;
   line-height: 1.5;
   text-align: center;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.02em;
   margin-bottom: 8px;
   }
     
@@ -1311,7 +1327,6 @@ flex-basis: calc((100% - 24px) / 2);
 
 .portfolio-list {
   display: flex;
-  flex-wrap: row;
   gap: 48px 24px;
   justify-content: start;
 }
